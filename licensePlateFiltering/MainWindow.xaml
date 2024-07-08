@@ -1,0 +1,98 @@
+﻿<Window x:Class="licensePlateFiltering.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:licensePlateFiltering"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="450" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <TextBlock 
+            Name="txtBlockTitle"
+            HorizontalAlignment="Left"
+            Height="19" 
+            Margin="10,10,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="200" 
+            TextAlignment="Center" 
+            FontWeight="Bold"
+            Text="Car License Filter"
+            />
+
+        <TextBlock 
+            Name="txtBlockCarLicenses"
+            HorizontalAlignment="Left"
+            Height="250" 
+            Margin="10,30,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="200" 
+            TextAlignment="Center" 
+            Text="Car Licenses Unsorted: "
+            />
+
+        <ComboBox 
+            Name="SortOrderComboBox" 
+            HorizontalAlignment="Left" 
+            Margin="263,285,0,0" 
+            VerticalAlignment="Top" 
+            Width="150">
+            <ComboBoxItem Content="Ascending"/>
+            <ComboBoxItem Content="Descending"/>
+        </ComboBox>
+
+        <Button 
+            Name="SortButton" 
+            Content="Sort" 
+            HorizontalAlignment="Left" 
+            Margin="263,312,0,0" 
+            VerticalAlignment="Top" 
+            Width="150" 
+            Click="SortAlphabetButton_Click"/>
+
+        <TextBlock 
+            Name="SortedPlatesTextBlock" 
+            HorizontalAlignment="Left" 
+            Margin="238,30,0,0" 
+            VerticalAlignment="Top" 
+            Width="200" 
+            Height="250" 
+            TextWrapping="Wrap" 
+            Text="Alphabetical License: "
+            TextAlignment="Center"
+            />
+        <ComboBox 
+            x:Name="SortOrderComboBox_Copy" 
+            HorizontalAlignment="Left" 
+            Margin="468,285,0,0" 
+            VerticalAlignment="Top" 
+            Width="150">
+            <ComboBoxItem Content="Ascending"/>
+            <ComboBoxItem Content="Descending"/>
+        </ComboBox>
+        <Button 
+            x:Name="SortButton_Copy" 
+            Content="Sort" 
+            HorizontalAlignment="Left" 
+            Margin="468,312,0,0" 
+            VerticalAlignment="Top" 
+            Width="150" 
+            Click="SortAlphabetButton_Click"/>
+        <TextBlock 
+            Name="sortedByLicenseTextBlock" 
+            HorizontalAlignment="Left" 
+            Margin="443,30,0,0" 
+            VerticalAlignment="Top" 
+            Width="200" 
+            Height="250" 
+            TextWrapping="Wrap" 
+            Text="Is owned: "
+            TextAlignment="Center"
+            />
+    </Grid>
+</Window>
